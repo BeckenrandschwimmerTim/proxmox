@@ -16,14 +16,14 @@ EOF
 }
 
 func_check_if_proxmox() {
-  echo -e "Check if its Proxmox ..."
+  echo -e "${Color_Blue}?${Color_NC}  Check if its Proxmox ..."
   if ! command -v pveversion >/dev/null 2>&1; then echo -e "⚠️  Has to be executed on Proxmox\n"; exit ; fi
   if command -v pveversion >/dev/null 2>&1; then echo -e "${Color_Green}✓${Color_NC}  Ok, seems to be Proxmox" ; fi
   func_line
 }
 
 func_check_if_pbs() {
-  echo -e "Check if its PBS ..."
+  echo -e "${Color_Blue}?${Color_NC}  Check if its PBS ..."
   if ! command -v proxmox-backup-manager versions >/dev/null 2>&1; then echo -e "⚠️  Has to be executed on PBS\n"; exit ; fi
   if command -v proxmox-backup-manager versions >/dev/null 2>&1; then echo -e "${Color_Green}✓${Color_NC}  Ok, seems to be PBS" ; fi
   func_line
@@ -55,6 +55,7 @@ func_set_colors(){
     Color_Green='\033[1;32m'             # Green (ex. Success Messages)
     Color_Red='\033[0;31m'               # Red (ex. Error Messages)
     Color_Orange='\033[0;33m'            # Orange (ex. Titles or important Information)
+    Color_Blue='\033[1;34m'              # Blue
     Color_NC='\033[0m'                   # No Color
     CM='✓'                               # Checkmark
     CROSS='✗'                            # Cross
