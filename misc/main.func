@@ -18,12 +18,14 @@ func_check_if_proxmox() {
   echo -e "  Check if its Proxmox ..."
   if ! command -v pveversion >/dev/null 2>&1; then echo -e "  ⚠️  Has to be executed on Proxmox\n"; exit ; fi
   if command -v pveversion >/dev/null 2>&1; then echo -e "  ✓  Ok, seems to be Proxmox\n" ; fi
+  func_line
 }
 
 func_check_if_pbs() {
   echo -e "  Check if its PBS ..."
   if ! command -v proxmox-backup-manager versions >/dev/null 2>&1; then echo -e "  ⚠️  Has to be executed on PBS\n"; exit ; fi
   if command -v proxmox-backup-manager versions >/dev/null 2>&1; then echo -e "  ✓  Ok, seems to be PBS\n" ; fi
+  func_line
 }
 
 func_timestamp(){
