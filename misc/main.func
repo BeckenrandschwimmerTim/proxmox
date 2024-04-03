@@ -33,7 +33,7 @@ func_timestamp(){
 }
 
 func_line(){
-	echo -e "\n======================\n"
+	echo -e "\n====================== \n"
 }
 
 func_small_line(){
