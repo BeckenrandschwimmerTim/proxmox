@@ -15,6 +15,11 @@ func_check_if_proxmox() {
   if command -v pveversion >/dev/null 2>&1; then echo -e "✓  Ok, seems to be Proxmox" ; fi
 }
 
+func_check_if_pbs() {
+  if ! command -v proxmox-backup-manager versions >/dev/null 2>&1; then echo -e "⚠️  Has to be executed on PBS"; exit ; fi
+  if command -v proxmox-backup-manager versions >/dev/null 2>&1; then echo -e "✓  Ok, seems to be PBS" ; fi
+}
+
 func_timestamp(){
 	timestamp=$(date +"%d.%m.%y - %T")
 }
