@@ -1,4 +1,5 @@
 header_info() {
+  func_set_colors
   clear
   cat <<"EOF"
 
