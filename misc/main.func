@@ -15,8 +15,8 @@ EOF
 }
 
 func_check_if_proxmox() {
-  if ! command -v pveversion >/dev/null 2>&1; then echo -e "⚠️  Has to be executed on Proxmox"; exit ; fi
-  if command -v pveversion >/dev/null 2>&1; then echo -e "✓  Ok, seems to be Proxmox" ; fi
+  if ! command -v pveversion >/dev/null 2>&1; then echo -e "⚠️  Has to be executed on Proxmox\n"; exit ; fi
+  if command -v pveversion >/dev/null 2>&1; then echo -e "✓  Ok, seems to be Proxmox\n" ; fi
 }
 
 func_check_if_pbs() {
