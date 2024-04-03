@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#########################################################
-Update PiHole as LXC when its tagged with "apptag_pihole"
-#########################################################
+###########################################################
+# Update PiHole as LXC when its tagged with "apptag_pihole"
+###########################################################
 
 source <(curl -s https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func)
 
