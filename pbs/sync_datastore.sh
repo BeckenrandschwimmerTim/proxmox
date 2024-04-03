@@ -1,8 +1,8 @@
 #!/bin/bash
 
-####################################################
-Sync a datastore with another (here attached by USB)
-####################################################
+######################################################
+# Sync a datastore with another (here attached by USB)
+######################################################
 
 source <(curl -s https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func)
 
