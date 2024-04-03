@@ -20,8 +20,8 @@ func_check_if_proxmox() {
 }
 
 func_check_if_pbs() {
-  if ! command -v proxmox-backup-manager versions >/dev/null 2>&1; then echo -e "⚠️  Has to be executed on PBS"; exit ; fi
-  if command -v proxmox-backup-manager versions >/dev/null 2>&1; then echo -e "✓  Ok, seems to be PBS" ; fi
+  if ! command -v proxmox-backup-manager versions >/dev/null 2>&1; then echo -e "⚠️  Has to be executed on PBS\n"; exit ; fi
+  if command -v proxmox-backup-manager versions >/dev/null 2>&1; then echo -e "✓  Ok, seems to be PBS\n" ; fi
 }
 
 func_timestamp(){
