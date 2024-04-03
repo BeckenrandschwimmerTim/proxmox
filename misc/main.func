@@ -15,19 +15,19 @@ func_check_if_proxmox() {
   if command -v pveversion >/dev/null 2>&1; then echo -e "✓  Ok, seems to be Proxmox" ; fi
 }
 
-function func_timestamp(){
+func_timestamp(){
 	timestamp=$(date +"%d.%m.%y - %T")
 }
 
-function func_line(){
+func_line(){
 	echo -e "\n====================== \n"
 }
 
-function func_small_line(){
+func_small_line(){
 	echo -e "\n=== \n"
 }
 
-function func_set_colors(){
+func_set_colors(){
     ######################
     #Black        0;30     Dark Gray     1;30
     #Red          0;31     Light Red     1;31
