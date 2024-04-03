@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 cache=$(find /var/cache/ -type f)
 if [[ -z "$cache" ]]; then
