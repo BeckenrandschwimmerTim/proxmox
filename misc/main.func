@@ -2,3 +2,34 @@ func_check_if_proxmox() {
   if ! command -v pveversion >/dev/null 2>&1; then echo -e "⚠️  Has to be executed on Proxmox"; exit ; fi
   if command -v pveversion >/dev/null 2>&1; then echo -e "✓  Ok, seems to be Proxmox" ; fi
 }
+
+function func_timestamp(){
+	timestamp=$(date +"%d.%m.%y - %T")
+}
+
+function func_line(){
+	echo -e "\n====================== \n"
+}
+
+function func_small_line(){
+	echo -e "\n=== \n"
+}
+
+function func_set_colors(){
+    ######################
+    #Black        0;30     Dark Gray     1;30
+    #Red          0;31     Light Red     1;31
+    #Green        0;32     Light Green   1;32
+    #Brown/Orange 0;33     Yellow        1;33
+    #Blue         0;34     Light Blue    1;34
+    #Purple       0;35     Light Purple  1;35
+    #Cyan         0;36     Light Cyan    1;36
+    #Light Gray   0;37     White         1;37
+    ######################
+    Color_Green='\033[1;32m'             # Success Messages
+    Color_Red='\033[0;31m'               # Error Messages
+    Color_Orange='\033[0;33m'            # Titles or important Information
+    Color_NC='\033[0m'                   # No Color
+    CM='✓'                               # Checkmark
+    CROSS='✗'                            # Cross
+}
