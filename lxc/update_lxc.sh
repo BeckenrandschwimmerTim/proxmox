@@ -1,8 +1,8 @@
 #!/bin/bash
 
-######################################################################
-Update LXC when its tagged with "apptag_auto_advanced_packaging_toole"
-######################################################################
+########################################################################
+# Update LXC when its tagged with "apptag_auto_advanced_packaging_toole"
+########################################################################
 
 source <(curl -s https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func)
 
