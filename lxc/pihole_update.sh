@@ -4,7 +4,6 @@
 Update PiHole as LXC when its tagged with "apptag_pihole"
 #########################################################
 
-clear
 source <(curl -s https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func)
 
 func_check_if_proxmox
