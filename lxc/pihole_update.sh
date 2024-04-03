@@ -6,6 +6,7 @@ Update PiHole as LXC when its tagged with "apptag_pihole"
 
 source <(curl -s https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func)
 
+header_info
 func_check_if_proxmox
 
 for container in $(pct list | awk '{if(NR>1) print $1}'); do pihole=0 && containername=$(pct exec "$container" hostname) &&\
