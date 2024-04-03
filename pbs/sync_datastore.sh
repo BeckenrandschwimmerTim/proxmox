@@ -58,8 +58,8 @@ if [ -d $target_dir/.chunks ]; then
     echo -e "Job is done. Unmount and set to maintenance mode in 15 seconds ..."
     sleep 15
     proxmox-backup-manager datastore update $target_name --maintenance-mode offline
-    umount -l $target_dir
     umount $target_dir
+    umount -l $target_dir
     sleep 5
     exit 0
 else
