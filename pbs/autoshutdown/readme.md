@@ -1,4 +1,4 @@
 - Create all three files
-- chmod +x /usr/local/bin/autoshutdown
-- systemctl daemon-reload
-- systemctl enable --now autoshutdown.timer
+- `chmod +x /usr/local/bin/autoshutdown`
+- `systemctl daemon-reload`
+- `systemctl enable --now autoshutdown.timer`
