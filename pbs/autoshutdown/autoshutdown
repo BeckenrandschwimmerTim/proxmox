@@ -5,9 +5,9 @@
 #Count of times we have queried and there are tasks running
 count=0
 #Number of no-task intervals before we shutdown
-max=10
+max=30
 #Interval in seconds
-interval=5
+interval=10
 
 
 #Continue until we shutdown
