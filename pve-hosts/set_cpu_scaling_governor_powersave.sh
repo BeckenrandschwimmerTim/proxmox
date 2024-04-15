@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#######################################################
-# Set CPU Scaling Governor to Powersave (UNTIL REBOOT!)
-#######################################################
+###########################################################
+App="Set CPU Scaling Governor to Powersave (UNTIL REBOOT!)"
+###########################################################
 
 # Search for main.func primarily localy else source it from the web
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
@@ -15,6 +15,8 @@ else
 fi
 
 header_info
+echo $App
+func_line
 
 echo "powersave" | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 echo -e "All Cores are now in ..."
