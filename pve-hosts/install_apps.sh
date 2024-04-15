@@ -5,7 +5,7 @@
 ##################################
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-source "$DIR/..//misc/main.func"
+source "$DIR/../misc/main.func"
 
 header_info
 
