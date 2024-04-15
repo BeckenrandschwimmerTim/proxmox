@@ -18,6 +18,6 @@ header_info
 echo $App
 func_line
 
-echo "powersave" | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 echo -e "All Cores are now in ..."
+echo "powersave" | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
