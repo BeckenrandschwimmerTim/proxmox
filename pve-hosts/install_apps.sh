@@ -10,4 +10,4 @@ source "$DIR/../misc/main.func"
 header_info
 
 apt-get update
-apt-get DEBIAN_FRONTEND=noninteractive install mc htop curl powertop -y
+DEBIAN_FRONTEND=noninteractive  apt-get install mc htop curl powertop -y
