@@ -4,7 +4,6 @@
 # Sync a datastore with another (here attached by USB)
 ######################################################
 
-$(dirname "$PWD")
 source $(dirname "$PWD")/misc/main.func
 
 header_info
