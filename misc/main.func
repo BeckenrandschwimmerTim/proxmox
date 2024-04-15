@@ -60,3 +60,9 @@ func_set_colors(){
     CM='✓'                               # Checkmark
     CROSS='✗'                            # Cross
 }
+
+func_app_title(){
+	func_line
+	echo $App
+	func_line
+}
