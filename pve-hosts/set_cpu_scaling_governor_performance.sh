@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#########################################################
-# Set CPU Scaling Governor to Performance (UNTIL REBOOT!)
-#########################################################
+#############################################################
+App="Set CPU Scaling Governor to Performance (UNTIL REBOOT!)"
+#############################################################
 
 # Search for main.func primarily localy else source it from the web
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
@@ -15,6 +15,7 @@ else
 fi
 
 header_info
+func_app_title
 
 echo "performance" | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 echo -e "All Cores are now in ..."
