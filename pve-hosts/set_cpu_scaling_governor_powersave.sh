@@ -1,8 +1,8 @@
 #!/bin/bash
 
-##################################
-# Install my needed apps and tools
-##################################
+#######################################################
+# Set CPU Scaling Governor to Powersave (UNTIL REBOOT!)
+#######################################################
 
 # Search for main.func primarily localy else source it from the web
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
