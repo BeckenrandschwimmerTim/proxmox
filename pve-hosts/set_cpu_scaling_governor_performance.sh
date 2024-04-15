@@ -17,6 +17,6 @@ fi
 header_info
 func_app_title
 
-echo "performance" | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 echo -e "All Cores are now in ..."
+echo "performance" | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
