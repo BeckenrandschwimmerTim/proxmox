@@ -15,8 +15,7 @@ else
 fi
 
 header_info
-echo $App
-func_line
+func_app_title
 
 echo -e "All Cores are now in ..."
 echo "powersave" | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
