@@ -6,9 +6,8 @@
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 source "$DIR/..//misc/main.func"
-#source ${PWD%/*}/misc/main.func
 
 header_info
-func_check_if_pbs
 
-exit
+apt-get update
+apt-get DEBIAN_FRONTEND=noninteractive install mc htop curl powertop -y
