@@ -17,4 +17,4 @@ fi
 header_info
 
 apt-get update
-DEBIAN_FRONTEND=noninteractive apt-get install mc htop curl powertop acpi-support acpid acpi -y
+DEBIAN_FRONTEND=noninteractive apt-get install mc htop curl powertop acpi-support acpid acpi iperf3 -y
