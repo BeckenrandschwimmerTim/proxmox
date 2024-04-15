@@ -4,8 +4,15 @@
 # Install my needed apps and tools
 ##################################
 
+# Search for main.func primarily localy else source it from the web
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-source "$DIR/../misc/main.func"
+if [ -f $DIR/../misc/main.func ]; then
+  echo -e "Use local source"
+  source "$DIR/../misc/main.func"
+else
+  echo -e "Use web source"
+  source <(curl -s https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func)
+fi
 
 header_info
 
