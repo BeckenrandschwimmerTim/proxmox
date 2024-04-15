@@ -17,4 +17,5 @@ fi
 header_info
 
 echo "performance" | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+echo -e "All Cores are now in ..."
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
