@@ -17,7 +17,10 @@ echo 'disabled' > '/sys/bus/usb/devices/usb2/power/wakeup'
 echo 'disabled' > '/sys/bus/usb/devices/1-4/power/wakeup'
 echo 'disabled' > '/sys/bus/usb/devices/1-5/power/wakeup'
 ```
-`chmod +x /scripts/powertop.sh`
+
+```
+chmod +x /scripts/powertop.sh
+```
 
 `crontab -e`
 `@reboot /scripts/powertop.sh`
