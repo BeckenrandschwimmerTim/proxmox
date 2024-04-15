@@ -4,7 +4,8 @@
 # Install my needed apps and tools
 ##################################
 
-source ../misc/main.func
+parentdir="${PWD%/*}"
+source $parentdir/misc/main.func
 
 header_info
 func_check_if_pbs
