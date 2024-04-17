@@ -26,4 +26,6 @@ chmod +x /scripts/powertop.sh
 crontab -e
 ```
 
-`@reboot /scripts/powertop.sh`
+```
+@reboot /scripts/powertop.sh
+```
