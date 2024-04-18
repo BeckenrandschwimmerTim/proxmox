@@ -51,3 +51,6 @@ systemctl daemon-reload
 systemctl enable autoshutdown.timer
 systemctl start autoshutdown.timer
 ```
+# Check results
+systemctl status autoshutdown.timer
+systemctl status autoshutdown.service
