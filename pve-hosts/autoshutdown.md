@@ -1,33 +1,6 @@
+# Create Script
 ```
 mkdir -p /scripts
-```
-```
-nano /etc/systemd/system/autoshutdown.service
-```
-```
-[Unit]
-Description=Autoshutdown
-
-[Service]
-Type=oneshot
-ExecStart=/bin/bash /scripts/autoshutdown.sh
-```
-
-```
-nano /etc/systemd/system/autoshutdown.timer
-```
-```
-[Unit]
-Description=Autoshutdown
-
-[Timer]
-OnUnitActiveSec=300s
-OnBootSec=300s
-
-[Install]
-WantedBy=timers.target
-```
-```
 nano /scripts/autoshutdown.sh
 ```
 ```
@@ -44,6 +17,34 @@ else
 	sleep 5
 fi
 ```
+# Create Service
+```
+nano /etc/systemd/system/autoshutdown.service
+```
+```
+[Unit]
+Description=Autoshutdown
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /scripts/autoshutdown.sh
+```
+# Create Timer
+```
+nano /etc/systemd/system/autoshutdown.timer
+```
+```
+[Unit]
+Description=Autoshutdown
+
+[Timer]
+OnUnitActiveSec=300s
+OnBootSec=300s
+
+[Install]
+WantedBy=timers.target
+```
+# Start the script chain
 ```
 chmod +x /scripts/autoshutdown.sh
 systemctl daemon-reload
