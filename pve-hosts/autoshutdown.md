@@ -54,6 +54,6 @@ systemctl start autoshutdown.timer
 ```
 # Check results
 ```
-systemctl status autoshutdown.timer
 systemctl status autoshutdown.service
+systemctl status autoshutdown.timer
 ```
