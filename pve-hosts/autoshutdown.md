@@ -7,7 +7,7 @@ nano /scripts/autoshutdown.sh
 #!/bin/bash
 
 file02_stopped=$(qm status 109 | grep -q stopped && echo "true" || echo "false")
-pbs_stopped=$(pct status 111 | grep -q stopped && echo "true" || echo "false")
+pbs_stopped=$(pct status 112 | grep -q stopped && echo "true" || echo "false")
 
 if [ "$file02_stopped" == "true" ] && [ "$pbs_stopped" == "true" ]; then
 	echo -e "Initiate shutdown"
