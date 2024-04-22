@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#Paste this whole file under /usr/local/bin/autoshutdown
-
 #Count of times we have queried and there are tasks running
 count=0
 #Number of no-task intervals before we shutdown
