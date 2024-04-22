@@ -1,10 +1,8 @@
-# Paste this whole file under /etc/systemd/system/autoshutdown.service
-
 [Unit]
 Description=Shutdown when there are no tasks left
 
 [Service]
-ExecStart=/usr/local/bin/autoshutdown
+ExecStart=/scripts/autoshutdown.sh
 
 [Install]
 WantedBy=default.target
