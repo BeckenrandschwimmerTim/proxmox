@@ -1,12 +1,9 @@
-# Paste this whole file under /etc/systemd/system/autoshutdown.timer
-
 [Unit]
 Description=Shutdown
 RefuseManualStart=no
 RefuseManualStop=no
 
 [Timer]
-#Run at 05:00 local time
 OnCalendar=*-*-* 05:00:00
 Unit=autoshutdown.service
 
