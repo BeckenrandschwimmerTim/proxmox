@@ -8,3 +8,4 @@ Shutdown PBS after 5:00 if additionally 5 minutes are gone. This 5 minutes are r
 - `chmod +x /scripts/autoshutdown.sh`
 - `systemctl daemon-reload`
 - `systemctl enable --now autoshutdown.timer`
+- `systemctl status autoshutdown.timer`
