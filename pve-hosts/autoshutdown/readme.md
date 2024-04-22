@@ -8,3 +8,4 @@ Shutdown pve-host if VM 109 and LXC 112 are stopped. This script is looped every
 - `chmod +x /scripts/autoshutdown.sh`
 - `systemctl daemon-reload`
 - `systemctl enable --now autoshutdown.timer`
+- `systemctl status autoshutdown.timer`
