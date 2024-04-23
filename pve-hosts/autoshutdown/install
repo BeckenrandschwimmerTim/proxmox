@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [[ $(id -u) -ne 0 ]]; then
+  echo "This script must be executed as root or using sudo."
+  exit 99
+fi
+
+# Eval script dir
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+mkdir -p $DIR/misc
+cd $DIR/misc
+curl https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func -o main.func
+
+cd $DIR
+curl https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/pve-hosts/autoshutdown/autoshutdown.sh -o autoshutdown.sh
+chmod +x autoshutdown.sh
+
+cd /etc/systemd/system/
+curl https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/pve-hosts/autoshutdown/autoshutdown.timer -o autoshutdown.timer
+curl https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/pve-hosts/autoshutdown/autoshutdown.service -o autoshutdown.service
+
+systemctl daemon-reload
+systemctl enable --now autoshutdown.timer
+systemctl status autoshutdown.timer
