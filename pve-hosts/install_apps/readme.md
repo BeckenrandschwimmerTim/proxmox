@@ -9,5 +9,5 @@ cd /scripts
 ```
 then execute:
 ```
-wget -O - https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/pve-hosts/autoshutdown/install | bash
+wget -O - https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/pve-hosts/install_apps/install_apps.sh | bash
 ```
