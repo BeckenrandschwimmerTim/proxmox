@@ -34,3 +34,4 @@ curl https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/pve-h
 systemctl daemon-reload
 systemctl enable --now autoshutdown.timer
 systemctl status autoshutdown.timer
+systemctl status autoshutdown.service
