@@ -1,5 +1,7 @@
 #!/bin/bash
 
+App="teeeescht"
+
 if [[ $(id -u) -ne 0 ]]; then
   echo "This script must be executed as root or using sudo."
   exit 99
@@ -8,11 +10,16 @@ fi
 # Eval script dir
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
+source <(curl -s https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func)
+func_check_if_pbs
+
 mkdir -p $DIR/misc
 cd $DIR/misc
 curl https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func -o main.func
 source $DIR/misc/main.func
-func_check_if_pbs
+
+header_info
+func_app_title
 
 cd $DIR
 curl https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/pve-hosts/autoshutdown/autoshutdown.sh -o autoshutdown.sh
