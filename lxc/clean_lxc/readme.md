@@ -11,9 +11,3 @@ then execute:
 ```
 wget -O - https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/lxc/clean_lxc/clean_lxc.sh | bash
 ```
-
-## Execute without updating it from the web (if already installed)
-Execute this on pve-host:
-```
-clean_lxc
-```
