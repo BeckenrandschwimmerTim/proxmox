@@ -1,0 +1,6 @@
+[Unit]
+Description=Failover OpenHAB
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /scripts/failover_openhab_slave.sh
