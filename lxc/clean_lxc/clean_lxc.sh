@@ -21,6 +21,7 @@ curl https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/
 source $DIR/misc/main.func
 
 header_info
+func_check_if_proxmox
 func_app_title
 
 for container in $(pct list | grep running | awk '{print $1}'); do
