@@ -24,14 +24,14 @@ header_info
 func_app_title
 
 cd $DIR
-curl https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/pve-hosts/autoshutdown/autoshutdown.sh -o autoshutdown.sh
-chmod +x autoshutdown.sh
+curl https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/lxc/failover_openhab/failover_openhab_master.sh -o failover_openhab_master.sh
+chmod +x failover_openhab_master.sh
 
 cd /etc/systemd/system/
-curl https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/pve-hosts/autoshutdown/autoshutdown.timer -o autoshutdown.timer
-curl https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/pve-hosts/autoshutdown/autoshutdown.service -o autoshutdown.service
+curl https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/lxc/failover_openhab/failover_openhab_master.timer -o failover_openhab_master.timer
+curl https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/lxc/failover_openhab/failover_openhab_master.service -o failover_openhab_master.service
 
 systemctl daemon-reload
-systemctl enable --now autoshutdown.timer
-systemctl status autoshutdown.timer
-systemctl status autoshutdown.service
+systemctl enable --now failover_openhab_master.timer
+systemctl status failover_openhab_master.timer
+systemctl status failover_openhab_master.service
