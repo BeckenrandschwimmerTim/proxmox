@@ -30,6 +30,6 @@ if [ "$healthstate" == "down" ]; then
     echo -e "Slave is down!"
     lxc-start $slave_id
   else
-    echo -e "Starting slave!"
+    echo -e "Slave is up. Everything fine!"
   fi
 fi
