@@ -22,6 +22,7 @@ if [ "$healthstate" == "up" ]; then
 fi
 if [ "$healthstate" == "down" ]; then
   echo -e "Master is down! Starting or keeping slave."
+  slave_state=$(pct list | grep $slave_name | grep stopped | awk '{print $1}')
   curl -m 10 --retry 5 $slave_check
   if [ ! -z "$slave_state" ]; then
     echo -e "Slave is down. Starting it!"
