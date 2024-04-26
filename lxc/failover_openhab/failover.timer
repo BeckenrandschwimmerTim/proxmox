@@ -1,5 +1,5 @@
 [Unit]
-Description=failover
+Description=Failover OpenHAB
 
 [Timer]
 OnUnitActiveSec=60s
