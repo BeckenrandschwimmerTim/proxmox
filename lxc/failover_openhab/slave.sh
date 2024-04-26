@@ -23,5 +23,8 @@ fi
 if [ "$healthstate" == "down" ]; then
   echo -e "Master is down! Starting or keeping slave."
   curl -m 10 --retry 5 $slave_check
-  lxc-start -n $slave_name
+  if [ "$slave_state" == "stopped" ]; then
+    echo -e "Slave is down. Starting it!"
+    lxc-start -n $slave_name
+  fi
 fi
