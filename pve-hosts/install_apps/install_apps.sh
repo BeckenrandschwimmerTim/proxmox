@@ -18,4 +18,4 @@ func_app_title
 func_check_if_proxmox
 
 apt-get update
-DEBIAN_FRONTEND=noninteractive apt-get install mc htop curl powertop acpi-support acpid acpi iperf3 sudo wget -y
+DEBIAN_FRONTEND=noninteractive apt-get install mc htop curl powertop acpi-support acpid acpi iperf3 sudo wget jq -y
