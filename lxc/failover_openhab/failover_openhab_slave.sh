@@ -12,7 +12,7 @@ if [ "$healthstate" == "" ]; then
 fi
 if [ "$healthstate" == "up" ]; then
   echo -e "Master is up!"
-  slave_state=$(pct list | grep $slave_name | awk '{print $1}')
+  slave_state=$(pct list | grep $slave_name | grep running | awk '{print $1}')
   if [ ! -z "$slave_state" ]; then
     echo -e "Slave still running! Shuting it down."
     lxc-stop -n $slave_name
