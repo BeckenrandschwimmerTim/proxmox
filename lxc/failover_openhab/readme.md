@@ -7,7 +7,11 @@ Create and jump to the directory like
 mkdir -p /scripts
 cd /scripts
 ```
-then execute:
+For MASTER execute:
 ```
 wget -O - https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/lxc/failover_openhab/install_failover_openhab_master | bash
+```
+For SLAVE execute:
+```
+wget -O - https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/lxc/failover_openhab/install_failover_openhab_slave | bash
 ```
