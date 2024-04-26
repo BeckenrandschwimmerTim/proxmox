@@ -27,7 +27,9 @@ if [ "$healthstate" == "down" ]; then
   curl -m 10 --retry 5 $slave_check
   if [ ! -z "$slave_state" ]; then
     slave_id=$slave_state
-    echo -e "Slave is down. Starting it!"
+    echo -e "Slave is down!"
     lxc-start $slave_id
+  else
+    echo -e "Starting slave!"
   fi
 fi
