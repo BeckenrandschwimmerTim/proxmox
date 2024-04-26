@@ -3,4 +3,4 @@ Description=Autoshutdown
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash /scripts/failover_master.sh
+ExecStart=/bin/bash /scripts/failover_openhab_master.sh
