@@ -1,5 +1,5 @@
 [Unit]
-Description=Autoshutdown
+Description=Failover OpenHAB
 
 [Service]
 Type=oneshot
