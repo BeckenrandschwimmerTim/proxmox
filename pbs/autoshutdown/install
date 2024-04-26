@@ -1,0 +1,37 @@
+#!/bin/bash
+
+App="Install Autoshutdown for pbs-hosts when no pbs-tasks are running"
+
+if [[ $(id -u) -ne 0 ]]; then
+  echo "This script must be executed as root or using sudo."
+  exit 99
+fi
+
+# Eval script dir
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+# Source main.func for func_check_if_pbs
+source <(curl -s https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func)
+func_check_if_pbs
+
+# After func_check_if_proxmox was successfully, continue ...
+mkdir -p $DIR/misc
+cd $DIR/misc
+curl https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func -o main.func
+source $DIR/misc/main.func
+
+header_info
+func_app_title
+
+cd $DIR
+curl https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/pbs/autoshutdown/autoshutdown.sh -o autoshutdown.sh
+chmod +x autoshutdown.sh
+
+cd /etc/systemd/system/
+curl https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/pbs/autoshutdown/autoshutdown.timer -o autoshutdown.timer
+curl https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/pbs/autoshutdown/autoshutdown.service -o autoshutdown.service
+
+systemctl daemon-reload
+systemctl enable --now autoshutdown.timer
+systemctl status autoshutdown.timer
+systemctl status autoshutdown.service
