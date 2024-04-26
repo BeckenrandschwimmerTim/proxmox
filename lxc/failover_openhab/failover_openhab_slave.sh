@@ -15,7 +15,7 @@ if [ "$healthstate" == "up" ]; then
   slave_state=$(pct list | grep $slave_name | grep running | awk '{print $1}')
   if [ ! -z "$slave_state" ]; then
     echo -e "Slave still running! Shuting it down."
-    lxc-stop -n $slave_name
+    lxc-stop $slave_name
   else
     echo -e "Slave is down. Everything fine!"
   fi
@@ -26,6 +26,6 @@ if [ "$healthstate" == "down" ]; then
   curl -m 10 --retry 5 $slave_check
   if [ ! -z "$slave_state" ]; then
     echo -e "Slave is down. Starting it!"
-    lxc-start -n $slave_name
+    lxc-start $slave_name
   fi
 fi
