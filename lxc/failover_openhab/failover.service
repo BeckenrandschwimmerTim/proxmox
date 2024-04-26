@@ -1,0 +1,6 @@
+[Unit]
+Description=Autoshutdown
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /scripts/failover_master.sh
