@@ -3,9 +3,6 @@
 # Check health state of master
 healthstate=$(curl -s 'https://healthchecks.io/b/2/0e244c1e-5235-4f4a-8ce0-3a3fa3437eaa.json' | jq -r '.status' | grep down)
 
-if [ "$healthstate" == "up" ]; then
-  echo -e "Everything fine! Service seems to be up."
-fi
 if [ "$healthstate" == "" ]; then
   echo -e "Nothing found! Is your internet or healthecks.io down?"
 fi
