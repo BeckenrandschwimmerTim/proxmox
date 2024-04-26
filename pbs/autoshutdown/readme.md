@@ -1,4 +1,4 @@
-# Shutdown (Hardware-)PBS after certain time
+# Shutdown PBS after certain time
 Shutdown PBS after 5:00 if additionally 5 minutes are gone. This 5 minutes are reset if a new task started in this period.
 
 ## Install Script with all dependencies
