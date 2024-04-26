@@ -8,6 +8,9 @@ if [ "$healthstate" == "" ]; then
 fi
 if [ "$healthstate" == "up" ]; then
   echo -e "Master is up! So slave will stay off."
+
+pct list | grep openhab-slave | grep running | awk '{print $1}')
+  
   lxc-stop -n openhab-slave
 fi
 if [ "$healthstate" == "down" ]; then
