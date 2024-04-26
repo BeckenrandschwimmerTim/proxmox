@@ -25,7 +25,8 @@ if [ "$healthstate" == "down" ]; then
   slave_state=$(pct list | grep $slave_name | grep stopped | awk '{print $1}')
   curl -m 10 --retry 5 $slave_check
   if [ ! -z "$slave_state" ]; then
+    slave_id=$slave_state
     echo -e "Slave is down. Starting it!"
-    lxc-start $slave_name
+    lxc-start $slave_id
   fi
 fi
