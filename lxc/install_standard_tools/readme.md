@@ -9,5 +9,5 @@ cd /scripts
 ```
 then execute:
 ```
-wget -O - https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/lxc/clean_lxc/clean_lxc.sh | bash
+wget -O - https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/lxc/install_standard_tools/install_standard_tools.sh | bash
 ```
