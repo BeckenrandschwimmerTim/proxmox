@@ -4,6 +4,8 @@
 # Install my needed packages on LXC if tagged with "apptag_tools"
 #################################################################
 
+App="Install standard tools on all LXC"
+
 source <(curl -s https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func)
 
 header_info
