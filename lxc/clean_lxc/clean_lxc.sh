@@ -1,6 +1,6 @@
 #!/bin/bash
 
-App="Clean LXC"
+App="Clean LXC \n teeeeeeest subtitle"
 
 source <(curl -s https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func)
 
