@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo -e "\n Cleaning /var/cache/"
+echo -e "Cleaning /var/cache/"
 cache=$(find /var/cache/ -type f)
 if [[ -z "$cache" ]]; then
   echo -e "${Color_Red}It appears there are no cached files on your system${Color_NC} \n"
