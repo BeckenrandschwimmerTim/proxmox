@@ -5,6 +5,7 @@ App="Clean LXC"
 source <(curl -s https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func)
 
 header_info
+func_app_title
 func_check_if_root
 func_check_if_proxmox
 
