@@ -2,7 +2,6 @@
 
 App="Clean LXC"
 
-
 source <(curl -s https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func)
 
 header_info
