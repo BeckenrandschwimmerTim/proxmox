@@ -7,7 +7,7 @@ if [[ -z "$cache" ]]; then
   sleep 2
 else
   find /var/cache -type f -delete
-  echo "Successfully Removed Cache \n"
+  echo -e "Successfully Removed Cache \n"
   sleep 2
 fi
 
@@ -18,6 +18,6 @@ if [[ -z "$logs" ]]; then
   sleep 2
 else
   find /var/log -type f -delete
-  echo "Successfully Removed Logs \n"
+  echo -e "Successfully Removed Logs \n"
   sleep 2
 fi
