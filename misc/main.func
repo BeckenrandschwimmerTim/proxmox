@@ -50,7 +50,7 @@ func_small_line(){
 	echo -e "\n=== \n"
 }
 
-func_next_line(){
+func_new_line(){
 	echo -e "\n"
 }
 
