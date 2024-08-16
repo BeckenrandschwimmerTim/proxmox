@@ -75,7 +75,7 @@ func_set_colors(){
 func_app_title(){
   if [ -n "$App" ]; then
     func_line
-    echo $App
+    echo -e "${Color_Orange}$App${Color_NC}"
     func_line
   else
     echo -e "⚠️  No app or script title provided. Consider one ..."
