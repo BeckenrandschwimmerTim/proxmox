@@ -4,6 +4,8 @@
 # Update PiHole as LXC if tagged with "apptag_pihole"
 #####################################################
 
+App="Update all PiHole instances"
+
 source <(curl -s https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func)
 
 header_info
