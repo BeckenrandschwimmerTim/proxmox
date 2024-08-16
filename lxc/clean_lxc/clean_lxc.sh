@@ -2,13 +2,12 @@
 
 App="Clean LXC"
 
-# Source main.func for func_check_if_root and func_check_if_proxmox
+
 source <(curl -s https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func)
-func_check_if_root
-func_check_if_proxmox
 
 header_info
-func_app_title
+func_check_if_root
+func_check_if_proxmox
 
 for container in $(pct list | grep running | awk '{print $1}'); do
     containername=$(pct exec "$container" hostname) &&\
