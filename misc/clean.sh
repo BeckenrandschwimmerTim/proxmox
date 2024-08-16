@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source <(curl -s https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func)
+
 echo -e "${Color_Green}Cleaning /var/cache/${Color_NC}"
 cache=$(find /var/cache/ -type f)
 if [[ -z "$cache" ]]; then
