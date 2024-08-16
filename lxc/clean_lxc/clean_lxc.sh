@@ -1,6 +1,6 @@
 #!/bin/bash
 
-App="Clean LXC \n teeeeeeest subtitle"
+App="Clean LXC \nScript for cleaning up common Memory hogs"
 
 source <(curl -s https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func)
 
