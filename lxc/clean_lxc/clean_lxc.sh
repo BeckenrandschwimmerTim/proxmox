@@ -2,16 +2,12 @@
 
 App="Clean LXC"
 
-if [[ $(id -u) -ne 0 ]]; then
-  echo "This script must be executed as root or using sudo."
-  exit 99
-fi
-
 # Eval script dir
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
-# Source main.func for func_check_if_proxmox
+# Source main.func for func_check_if_root and func_check_if_proxmox
 source <(curl -s https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func)
+func_check_if_root
 func_check_if_proxmox
 
 # After func_check_if_proxmox was successfully, continue ...
@@ -21,7 +17,7 @@ curl https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/
 source $DIR/misc/main.func
 
 header_info
-func_check_if_proxmox
+#func_check_if_proxmox
 func_app_title
 
 for container in $(pct list | grep running | awk '{print $1}'); do
