@@ -8,9 +8,6 @@ header_info
 func_check_if_root
 func_check_if_proxmox
 
-mkdir -p /scripts
-cd /scripts
-
 for container in $(pct list | grep running | awk '{print $1}'); do
     containername=$(pct exec "$container" hostname) &&\
     echo "CT: $container - $containername" &&\
