@@ -19,10 +19,3 @@ for container in $(pct list | grep running | awk '{print $1}'); do
     pct exec $container -- bash -c "if command -v docker >/dev/null 2>&1; then docker image prune -a -f; exit; fi" &&\
     echo -e "${Color_Green}Container: $container - $containername finished${Color_NC}" &&\
     func_small_line; done
-
-
-
-
-
-
-    if ! command -v docker image >/dev/null 2>&1; then docker image prune -a -f; exit ; fi
