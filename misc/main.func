@@ -50,6 +50,10 @@ func_small_line(){
 	echo -e "\n=== \n"
 }
 
+func_next_line(){
+	echo -e "\n"
+}
+
 func_set_colors(){
     ######################
     #Black        0;30     Dark Gray     1;30
