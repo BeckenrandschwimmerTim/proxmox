@@ -2,16 +2,12 @@
 
 App="Install Autoshutdown for pve-hosts if some vm/lxc are stopped"
 
-if [[ $(id -u) -ne 0 ]]; then
-  echo "This script must be executed as root or using sudo."
-  exit 99
-fi
-
 # Eval script dir
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 # Source main.func for func_check_if_proxmox
 source <(curl -s https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func)
+func_check_if_root
 func_check_if_proxmox
 
 # After func_check_if_proxmox was successfully, continue ...
