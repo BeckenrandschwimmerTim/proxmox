@@ -17,8 +17,10 @@ EOF
 
 func_check_if_root() {
   if [[ $(id -u) -ne 0 ]]; then
-    echo -e "${Color_Green}✓${Color_NC} Ok, seems to be root or sudo"
+    echo -e "${Color_Green}✗${Color_NC} Please execute as root or sudo"
     exit 99
+  else
+    echo -e "${Color_Green}✓${Color_NC} Ok, seems to be root or sudo"
   fi
 }
 
