@@ -13,6 +13,6 @@ func_check_if_proxmox
 
 for container in $(pct list | awk '{if(NR>1) print $1}'); do portaineragent_as_docker_v1=0 && containername=$(pct exec "$container" hostname) &&\
     echo "CT: $container - $containername" &&\
-    pct config $container | grep -q "apptag_portaineragent_as_docker_v1" && echo "portaineragent_as_docker_v1: true" && portaineragent_as_docker_v1=1 || echo "portaineragent_as_docker_v1: false" &&\
+    pct config $container | grep -q "apptag_portaineragent_as_docker_v1" && echo "Portaineragent as Docker: true" && portaineragent_as_docker_v1=1 || echo "Portaineragent as Docker: false" &&\
     if [ $portaineragent_as_docker_v1 -eq 1 ]; then pct exec $container -- bash -c "cd /sharedfolders/appdata/portainer-agent && docker compose pull && docker compose up -d"; fi
     echo ---; done
