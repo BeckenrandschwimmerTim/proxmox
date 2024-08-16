@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-echo -e "Cleaning /var/cache/"
+echo -e "${Color_Green}Cleaning /var/cache/${Color_NC}"
 cache=$(find /var/cache/ -type f)
 if [[ -z "$cache" ]]; then
-  echo -e "${Color_Red}It appears there are no cached files on your system${Color_NC} \n"
+  echo -e "${Color_Green}It appears there are no cached files on your system${Color_NC} \n"
   sleep 2
 else
   find /var/cache -type f -delete
@@ -11,10 +11,10 @@ else
   sleep 2
 fi
 
-echo -e "Cleaning /var/log/"
+echo -e "${Color_Green}Cleaning /var/log/${Color_NC}"
 logs=$(find /var/log/ -type f)
 if [[ -z "$logs" ]]; then
-  echo -e "${Color_Red}It appears there are no logs on your system${Color_NC} \n"
+  echo -e "${Color_Green}It appears there are no logs on your system${Color_NC} \n"
   sleep 2
 else
   find /var/log -type f -delete
