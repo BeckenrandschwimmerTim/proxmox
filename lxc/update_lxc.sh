@@ -4,6 +4,8 @@
 # Update LXC if tagged with "apptag_auto_advanced_packaging_tool"
 #################################################################
 
+App="Update all LXC with specific tag"
+
 source <(curl -s https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func)
 
 header_info
