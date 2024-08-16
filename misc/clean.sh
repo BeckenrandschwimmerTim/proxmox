@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 echo -e "${Color_Green}Cleaning /var/cache/${Color_NC}"
 cache=$(find /var/cache/ -type f)
