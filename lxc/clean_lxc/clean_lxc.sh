@@ -16,4 +16,4 @@ for container in $(pct list | grep running | awk '{print $1}'); do
     echo -e "${Color_Green}Cleaning up docker images no longer used ...${Color_NC}" &&\
     pct exec $container -- bash -c "docker image prune -a -f >/dev/null 2>&1"
     echo -e "${Color_Green}Container: $container - $containername finished${Color_NC}" &&\
-    echo ---; done
+    func_small_line; done
