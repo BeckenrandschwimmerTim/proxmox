@@ -69,7 +69,11 @@ func_set_colors(){
 }
 
 func_app_title(){
-	func_line
-	echo $App
-	func_line
+  if [ -n "$App" ]; then
+    func_line
+    echo $App
+    func_line
+  else
+    echo -e "⚠️ No app or script title provided. Consider one ..." ; fi
+  fi
 }
