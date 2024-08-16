@@ -9,5 +9,5 @@ cd /scripts
 ```
 then execute:
 ```
-wget -O - https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/lxc/install_standard_tools/install_standard_tools.sh | bash
+wget -O - https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/lxc/update_portaineragent/update_portaineragent.sh | bash
 ```
