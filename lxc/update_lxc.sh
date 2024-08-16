@@ -9,6 +9,7 @@ App="Update all LXC with specific tag"
 source <(curl -s https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmox/main/misc/main.func)
 
 header_info
+func_check_if_root
 func_check_if_proxmox
 
 for container in $(pct list | awk '{if(NR>1) print $1}'); do aptget=0 && containername=$(pct exec "$container" hostname) &&\
