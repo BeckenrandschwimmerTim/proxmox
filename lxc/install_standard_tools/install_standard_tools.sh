@@ -10,8 +10,8 @@ func_check_if_root
 func_check_if_proxmox
 
 for container in $(pct list | awk '{if(NR>1) print $1}'); do tools=0 && containername=$(pct exec "$container" hostname) &&\
-    echo "CT: $container - $containername" &&\
+    echo -e "${Color_Green}Container: $container - $containername${Color_NC}" &&\
     pct config $container | grep -q "apptag_tools" && echo "Tools: true" && tools=1 || echo "Tools: false" &&\
     if [ $tools -eq 1 ]; then pct exec $container -- bash -c "apt-get update"; fi
     if [ $tools -eq 1 ]; then pct exec $container -- bash -c "DEBIAN_FRONTEND=noninteractive apt-get install curl mc htop sudo net-tools nano wget -y"; fi
-    echo ---; done
+    func_small_line; done
