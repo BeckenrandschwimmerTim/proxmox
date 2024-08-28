@@ -7,4 +7,4 @@ export PBS_REPOSITORY
 export PBS_PASSWORD
 export PBS_FINGERPRINT
 
-proxmox-backup-client backup root.pxar:/ --include-dev /etc/pve
+proxmox-backup-client backup root.pxar:/ --include-dev /etc/pve  --exclude /var/log
