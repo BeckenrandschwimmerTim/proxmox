@@ -11,6 +11,7 @@ func_check_if_pbs
 
 source_name="datastore01"
 source_prune_job="s-0efad1c7-e935"
+source_verify_job="v-f998c521-d546"
 target_device="/dev/disk/by-id/usb-FIDECO_M203CPS_012345680503-0:0-part1"
 target_name="usb-datastore"
 target_dir="/mnt/datastore/usb-datastore"
@@ -34,6 +35,10 @@ if [ -d $target_dir/.chunks ]; then
     echo -e "Start garbage collection of $source_name"
     sleep 5
     proxmox-backup-manager garbage-collection start $source_name
+    echo -e "----------------------------------------------------------"
+    echo -e "Start verify $source_name"
+    sleep 5
+    proxmox-backup-manager verify-job run $source_verify_job
     echo -e "----------------------------------------------------------"
     echo -e ""
     echo -e "Jobs on source are done. Continue with target..."
