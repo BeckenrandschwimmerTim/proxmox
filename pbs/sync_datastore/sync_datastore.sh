@@ -9,8 +9,8 @@ source <(curl -s https://raw.githubusercontent.com/BeckenrandschwimmerTim/proxmo
 header_info
 func_check_if_pbs
 
-source_name="localbackupstorage"
-source_prune_job="s-9fbd06a7-3249"
+source_name="datastore01"
+source_prune_job="s-0efad1c7-e935"
 target_device="/dev/disk/by-id/usb-FIDECO_M203CPS_012345680503-0:0-part1"
 target_name="usb-datastore"
 target_dir="/mnt/usb-datastore"
