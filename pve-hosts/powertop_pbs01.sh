@@ -7,6 +7,7 @@ echo 'disabled' > '/sys/class/net/enp2s0/device/power/wakeup'
 echo 'disabled' > '/sys/bus/usb/devices/usb1/power/wakeup'
 echo 'disabled' > '/sys/bus/usb/devices/usb2/power/wakeup'
 echo 'disabled' > '/sys/bus/usb/devices/2-3/power/wakeup'
+echo 'disabled' > '/sys/bus/usb/devices/1-4/power/wakeup'
 
 #echo "performance" | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 echo "powersave" | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
